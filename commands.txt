@@ -1,0 +1,23 @@
+//=============================================================================================
+flutter build appbundle --release
+flutter build apk --release
+flutter build ipa --release
+//=============================================================================================
+flutter build apk -t lib/dev_main.dart
+flutter build apk -t lib/prod_main.dart
+flutter build appbundle -t lib/dev_main.dart
+flutter build appbundle -t lib/prod_main.dart
+flutter build ipa -t lib/dev_main.dart
+flutter build ipa -t lib/prod_main.dart
+//=============================================================================================
+flutter run --release -t lib/dev_main.dart
+flutter run --release -t lib/prod_main.dart
+flutter run --release
+//=============================================================================================
+flutter pub run easy_localization:generate --source-dir assets/translations
+flutter pub run easy_localization:generate -S assets/translations -f keys -o locale_keys.g.dart
+//=============================================================================================
+dart run build_runner build
+flutter gen-l10n
+//=============================================================================================
+keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
