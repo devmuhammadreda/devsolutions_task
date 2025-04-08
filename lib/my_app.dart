@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/theme/size_config.dart';
 import 'core/theme/theme_manager.dart';
+import 'features/onboarding/presentation/pages/onboarding_screen.dart';
 import 'l10n/messages.dart';
 import 'l10n/messages.dart' as common_messages;
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
             common_messages.S.delegate,
           ],
           supportedLocales: S.supportedLocales,
+          home: OnboardingScreen(),
           builder: (context, child) {
             child = botToastBuilder(context, child!);
             return child;

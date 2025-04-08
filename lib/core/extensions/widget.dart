@@ -1,6 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../widgets/app_spacer.dart';
+
 /// add Padding Property to widget
 extension WidgetPaddingX on Widget {
   List<Widget> operator *(times) => List.generate(times, (index) => this);
@@ -32,10 +34,10 @@ extension WidgetPaddingX on Widget {
   );
 
   Widget get horizontalScreenPadding =>
-      Padding(padding: EdgeInsets.symmetric(horizontal: 14.sp), child: this);
+      Padding(padding: EdgeInsets.symmetric(horizontal: 20.sp), child: this);
 
   Widget get scrollHorizontalScreenPadding =>
-      Padding(padding: EdgeInsets.only(left: 15.sp), child: this);
+      Padding(padding: EdgeInsets.only(left: 20.sp), child: this);
 
   Widget hideKeyboard(BuildContext context) {
     return GestureDetector(
@@ -77,4 +79,29 @@ extension WidgetMarginX on Widget {
 /// Allows you to insert widgets inside a CustomScrollView
 extension WidgetSliverBoxX on Widget {
   Widget get sliverBox => SliverToBoxAdapter(child: this);
+}
+
+// Extension on Widget with just width and height spacing
+extension AppSpacerExtension on Widget {
+  // Adds horizontal spacing (width) using AppSpacer
+  Widget spaceWidth([double widthRatio = 1]) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        AppSpacer(widthRatio: widthRatio, heightRatio: 0),
+        this,
+      ],
+    );
+  }
+
+  // Adds vertical spacing (height) using AppSpacer
+  Widget spaceHeight([double heightRatio = 1]) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        AppSpacer(widthRatio: 0, heightRatio: heightRatio),
+        this,
+      ],
+    );
+  }
 }

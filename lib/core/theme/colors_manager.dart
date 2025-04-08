@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ColorsManager {
-  static const Color scaffoldBackground = Color(0xFFFCFCFC);
+  static const Color primary = Color(0xFFFF5500);
+  static const Color subPrimary = Color(0xFF1E1E1E);
+  static const Color scaffoldBackground = Color(0xFFFFFFFF);
   static const Color star = Color(0xFFFBEC26);
-  static const Color buttonColor = Color(0xFFD0FD3E);
   static const Color dotColor = Color(0xFFADB3BC);
-  static const Color primary = Color(0xFF2C2C2C);
-  static const Color primaryDark = Color(0xFF24306E);
   static const Color accent = Color.fromARGB(255, 2, 30, 100);
   static const Color white = Color(0xFFFFFFFF);
   static const Color selection = Color(0xFF3E6FCF);
