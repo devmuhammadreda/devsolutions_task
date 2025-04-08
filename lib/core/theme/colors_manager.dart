@@ -48,6 +48,14 @@ class ColorsManager {
     return hslDark.toColor();
   }
 
+  static LinearGradient get onboardingGradient {
+    return LinearGradient(
+      colors: [Color(0xFFCE048C), Color(0xFF4D0A8E)],
+      begin: Alignment.topRight,
+      end: Alignment.bottomLeft,
+    );
+  }
+
   static LinearGradient primaryGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,

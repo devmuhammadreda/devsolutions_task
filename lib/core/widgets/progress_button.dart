@@ -17,6 +17,7 @@ class AppProgressButton extends StatefulWidget {
   final EdgeInsets? padding;
   final bool isBordered;
   final bool isOutlined;
+  final Color? borderColor;
   final Function(AnimationController) onPressed;
 
   const AppProgressButton({
@@ -26,15 +27,16 @@ class AppProgressButton extends StatefulWidget {
     this.child,
     this.width,
     this.height,
-    this.radius,
+    this.radius = 65,
     this.elevation = 0,
     this.fontSize,
-    this.backgroundColor = ColorsManager.black,
+    this.backgroundColor = ColorsManager.primary,
     this.textColor,
     this.progressIndicatorColor,
     this.padding,
     this.isBordered = false,
     this.isOutlined = false,
+    this.borderColor,
   }) : assert(
          text != null || child != null,
          'Either text or child must be provided',
@@ -93,7 +95,7 @@ class _AppProgressButtonState extends State<AppProgressButton>
     ).animate(curvedAnimation);
 
     _radiusAnimation = BorderRadiusTween(
-      begin: BorderRadius.circular(widget.radius?.r ?? 8.r),
+      begin: BorderRadius.circular(widget.radius?.r ?? 65.r),
       end: BorderRadius.circular(_buttonHeight / 2),
     ).animate(curvedAnimation);
   }
@@ -145,11 +147,15 @@ class _AppProgressButtonState extends State<AppProgressButton>
   BorderSide _getBorderSide() {
     if (widget.isOutlined || widget.isBordered) {
       return BorderSide(
-        color: widget.textColor ?? ColorsManager.black,
+        color: widget.borderColor ?? ColorsManager.black,
         width: 1.w,
       );
     }
-    return BorderSide.none;
+    // When isBordered is false and isOutlined is false, return a transparent border
+    return BorderSide(
+      color: Colors.transparent, // Transparent border
+      width: 1.w, // Maintain the same width for consistency
+    );
   }
 
   Widget _buildButtonContent() {
@@ -182,7 +188,7 @@ class _AppProgressButtonState extends State<AppProgressButton>
           widget.child ??
           Text(
             widget.text ?? 'Click Me',
-            style: TextStyles.regular14.copyWith(
+            style: TextStyles.semiBold14.copyWith(
               color:
                   widget.isOutlined
                       ? widget.textColor ?? ColorsManager.black

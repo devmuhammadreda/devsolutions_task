@@ -32,6 +32,8 @@ extension ColorEx on Color {
         floatToInt8(g) << 8 |
         floatToInt8(b) << 0;
   }
+
+
 }
 
 extension HexColor on Color {
