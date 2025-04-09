@@ -1,4 +1,4 @@
-import 'package:devsolutions_task/core/theme/colors_manager.dart';
+import '../../../../core/theme/colors_manager.dart';
 import 'package:flutter/material.dart';
 
 class PaymentMethodEntity {

@@ -1,9 +1,9 @@
 import 'dart:developer';
 
-import 'package:devsolutions_task/core/extensions/build_context.dart';
-import 'package:devsolutions_task/core/extensions/widget.dart';
-import 'package:devsolutions_task/core/widgets/app_spacer.dart';
-import 'package:devsolutions_task/gen/assets.gen.dart';
+import '../../../../core/extensions/build_context.dart';
+import '../../../../core/extensions/widget.dart';
+import '../../../../core/widgets/app_spacer.dart';
+import '../../../../gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

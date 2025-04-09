@@ -1,7 +1,7 @@
-import 'package:devsolutions_task/features/home/data/datasources/home_data_sources.dart';
-import 'package:devsolutions_task/features/home/data/repositories/home_repo.dart';
-import 'package:devsolutions_task/features/home/domain/repositories/home_base_repo.dart';
-import 'package:devsolutions_task/features/home/presentation/cubit/home_cubit.dart';
+import 'data/datasources/home_data_sources.dart';
+import 'data/repositories/home_repo.dart';
+import 'domain/repositories/home_base_repo.dart';
+import 'presentation/cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../injection_container.dart';

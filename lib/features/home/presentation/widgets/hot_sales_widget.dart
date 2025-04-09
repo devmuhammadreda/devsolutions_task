@@ -1,7 +1,7 @@
-import 'package:devsolutions_task/core/extensions/build_context.dart';
-import 'package:devsolutions_task/core/widgets/app_spacer.dart';
-import 'package:devsolutions_task/core/widgets/custom_error_widget.dart';
-import 'package:devsolutions_task/features/home/presentation/cubit/products/products_cubit.dart';
+import '../../../../core/extensions/build_context.dart';
+import '../../../../core/widgets/app_spacer.dart';
+import '../../../../core/widgets/custom_error_widget.dart';
+import '../cubit/products/products_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

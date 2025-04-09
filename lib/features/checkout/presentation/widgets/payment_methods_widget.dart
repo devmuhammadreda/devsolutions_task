@@ -1,5 +1,5 @@
-import 'package:devsolutions_task/core/extensions/build_context.dart';
-import 'package:devsolutions_task/core/widgets/app_spacer.dart';
+import '../../../../core/extensions/build_context.dart';
+import '../../../../core/widgets/app_spacer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

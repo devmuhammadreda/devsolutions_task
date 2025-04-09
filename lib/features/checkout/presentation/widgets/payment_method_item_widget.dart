@@ -1,5 +1,5 @@
-import 'package:devsolutions_task/core/extensions/build_context.dart';
-import 'package:devsolutions_task/core/theme/text_styles.dart';
+import '../../../../core/extensions/build_context.dart';
+import '../../../../core/theme/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/global/strings.dart';

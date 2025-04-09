@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 
-import 'package:devsolutions_task/core/error/failures.dart';
+import '../../../../core/error/failures.dart';
 
-import 'package:devsolutions_task/features/home/domain/entities/product_entity.dart';
+import '../../../home/domain/entities/product_entity.dart';
 
 import '../../../../core/error/exceptions.dart';
 import '../../domain/repositories/favorites_base_repo.dart';

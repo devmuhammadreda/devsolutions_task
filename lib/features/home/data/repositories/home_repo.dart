@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:devsolutions_task/core/error/exceptions.dart';
-import 'package:devsolutions_task/core/error/failures.dart';
-import 'package:devsolutions_task/features/home/domain/entities/product_entity.dart';
-import 'package:devsolutions_task/features/home/domain/repositories/home_base_repo.dart';
+import '../../../../core/error/exceptions.dart';
+import '../../../../core/error/failures.dart';
+import '../../domain/entities/product_entity.dart';
+import '../../domain/repositories/home_base_repo.dart';
 
 import '../datasources/home_data_sources.dart';
 

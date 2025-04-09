@@ -1,5 +1,5 @@
-import 'package:devsolutions_task/core/extensions/build_context.dart';
-import 'package:devsolutions_task/core/extensions/int.dart';
+import '../../../../core/extensions/build_context.dart';
+import '../../../../core/extensions/int.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

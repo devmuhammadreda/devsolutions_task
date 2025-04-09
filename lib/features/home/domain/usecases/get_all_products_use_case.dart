@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:devsolutions_task/core/usecase/base_usecase.dart';
+import '../../../../core/usecase/base_usecase.dart';
 
 import '../../../../core/error/failures.dart';
 import '../entities/product_entity.dart';

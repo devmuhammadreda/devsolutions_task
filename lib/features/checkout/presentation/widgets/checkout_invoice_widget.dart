@@ -1,6 +1,6 @@
-import 'package:devsolutions_task/core/theme/colors_manager.dart';
-import 'package:devsolutions_task/core/theme/text_styles.dart';
-import 'package:devsolutions_task/core/widgets/app_spacer.dart';
+import '../../../../core/theme/colors_manager.dart';
+import '../../../../core/theme/text_styles.dart';
+import '../../../../core/widgets/app_spacer.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutInvoiceWidget extends StatelessWidget {

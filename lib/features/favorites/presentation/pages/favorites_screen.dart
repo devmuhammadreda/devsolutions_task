@@ -1,6 +1,6 @@
-import 'package:devsolutions_task/core/widgets/custom_error_widget.dart';
-import 'package:devsolutions_task/core/widgets/loading_widget.dart';
-import 'package:devsolutions_task/features/favorites/presentation/cubit/favorites_cubit.dart';
+import '../../../../core/widgets/custom_error_widget.dart';
+import '../../../../core/widgets/loading_widget.dart';
+import '../cubit/favorites_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

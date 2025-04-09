@@ -1,9 +1,9 @@
-import 'package:devsolutions_task/core/extensions/build_context.dart';
-import 'package:devsolutions_task/core/theme/colors_manager.dart';
-import 'package:devsolutions_task/core/utils/router.dart';
-import 'package:devsolutions_task/core/widgets/app_spacer.dart';
-import 'package:devsolutions_task/core/widgets/progress_button.dart';
-import 'package:devsolutions_task/gen/assets.gen.dart';
+import '../../../../core/extensions/build_context.dart';
+import '../../../../core/theme/colors_manager.dart';
+import '../../../../core/utils/router.dart';
+import '../../../../core/widgets/app_spacer.dart';
+import '../../../../core/widgets/progress_button.dart';
+import '../../../../gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

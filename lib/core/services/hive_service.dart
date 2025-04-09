@@ -1,4 +1,4 @@
-import 'package:devsolutions_task/hive_registrar.g.dart';
+import '../../hive_registrar.g.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 
 class HiveService {

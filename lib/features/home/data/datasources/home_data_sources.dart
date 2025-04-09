@@ -1,4 +1,4 @@
-import 'package:devsolutions_task/core/global/api_keys.dart';
+import '../../../../core/global/api_keys.dart';
 
 import '../../../../core/services/network_service.dart/api_basehelper.dart';
 import '../../domain/entities/product_entity.dart';

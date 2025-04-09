@@ -1,8 +1,8 @@
 import 'dart:developer';
 
-import 'package:devsolutions_task/core/theme/text_styles.dart';
-import 'package:devsolutions_task/core/widgets/app_spacer.dart';
-import 'package:devsolutions_task/core/widgets/header_widget.dart';
+import '../../../../core/theme/text_styles.dart';
+import '../../../../core/widgets/app_spacer.dart';
+import '../../../../core/widgets/header_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

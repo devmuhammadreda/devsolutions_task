@@ -1,5 +1,5 @@
-import 'package:devsolutions_task/core/theme/text_styles.dart';
-import 'package:devsolutions_task/core/widgets/app_spacer.dart';
+import '../theme/text_styles.dart';
+import 'app_spacer.dart';
 import 'package:flutter/material.dart';
 
 class EmptyWidget extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:devsolutions_task/core/widgets/app_spacer.dart';
-import 'package:devsolutions_task/core/widgets/network_image.dart';
+import '../../../../core/widgets/app_spacer.dart';
+import '../../../../core/widgets/network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
