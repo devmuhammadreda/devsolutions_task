@@ -15,7 +15,7 @@ class ColorsManager {
   static const Color offWhite = Color(0xFFF3F3F3);
   static const Color veryLightGrey = Color(0xFFCDCDCD);
   static const Color checkBoxBorderColor = Color(0xFFD9D9D9);
-  static const Color lightGrey = Color(0xFF9E9E9E);
+  static const Color lightGrey = Color(0xFFF7F7F7);
   static const Color grey = Color(0xFF7C7C7C); //#8C8C8C
   static const Color darkGrey = Color(0xFF616161);
   static const Color veryDarkGrey = Color(0xFF505050);

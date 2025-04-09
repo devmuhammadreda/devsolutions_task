@@ -12,6 +12,16 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart' as _svg;
 import 'package:vector_graphics/vector_graphics.dart' as _vg;
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/heart.svg
+  SvgGenImage get heart => const SvgGenImage('assets/icons/heart.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [heart];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -22,8 +32,12 @@ class $AssetsImagesGen {
   AssetGenImage get authImage =>
       const AssetGenImage('assets/images/auth_image.png');
 
+  /// File path: assets/images/home_header.png
+  AssetGenImage get homeHeader =>
+      const AssetGenImage('assets/images/home_header.png');
+
   /// List of all assets
-  List<dynamic> get values => [authBg, authImage];
+  List<dynamic> get values => [authBg, authImage, homeHeader];
 }
 
 class $AssetsTranslationGen {
@@ -42,6 +56,7 @@ class $AssetsTranslationGen {
 class Assets {
   const Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsTranslationGen translation = $AssetsTranslationGen();
 }

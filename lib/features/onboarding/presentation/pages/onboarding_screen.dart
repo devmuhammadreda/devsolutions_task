@@ -1,10 +1,13 @@
 import 'package:devsolutions_task/core/extensions/build_context.dart';
 import 'package:devsolutions_task/core/theme/colors_manager.dart';
+import 'package:devsolutions_task/core/utils/router.dart';
 import 'package:devsolutions_task/core/widgets/app_spacer.dart';
 import 'package:devsolutions_task/core/widgets/progress_button.dart';
 import 'package:devsolutions_task/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../nav_screen/presentation/pages/nav_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -30,7 +33,9 @@ class OnboardingScreen extends StatelessWidget {
             ),
             AppSpacer(),
             AppProgressButton(
-              onPressed: (anim) {},
+              onPressed: (anim) {
+                MagicRouter.navigateTo(NavScreen());
+              },
               text: "SKIP",
               isOutlined: true,
               borderColor: Colors.transparent,

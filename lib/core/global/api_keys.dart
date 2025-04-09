@@ -2,13 +2,11 @@
 
 import 'dart:developer';
 
-import '../services/network_service.dart/dio_network_service.dart';
-
 const String dummyImage = "https://picsum.photos/800";
-final NetworkService networkService = NetworkService(baseUrl: APIKeys.baseUrl);
 
 class APIKeys {
-  static String baseUrl = "";
+  static String baseUrl = "https://fakestoreapi.com/";
+  static String getProducts = "products";
 }
 
 String imagePath(String path) {

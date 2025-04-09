@@ -138,7 +138,7 @@ class MainNetworkImage extends StatelessWidget {
   const MainNetworkImage({
     required this.imageUrl,
     this.width,
-    this.height,
+    this.height = 200,
     this.radius,
     this.fit,
     this.borderColor,

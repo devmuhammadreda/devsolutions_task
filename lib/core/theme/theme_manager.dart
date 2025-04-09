@@ -39,7 +39,7 @@ class ThemeManager {
     appBarTheme: AppBarTheme(
       elevation: 0,
       scrolledUnderElevation: 0,
-      iconTheme: const IconThemeData(color: ColorsManager.white),
+      iconTheme: const IconThemeData(color: ColorsManager.grey ),
       backgroundColor: ColorsManager.scaffoldBackground,
       shadowColor: ColorsManager.black,
       centerTitle: false,
@@ -93,30 +93,39 @@ class ThemeManager {
     inputDecorationTheme: InputDecorationTheme(
       //border
       border: UnderlineInputBorder(
-        borderRadius: BorderRadius.circular(12.0),
-        borderSide: const BorderSide(color: ColorsManager.primary),
+        borderRadius: BorderRadius.circular(64.0),
+        borderSide: const BorderSide(color: ColorsManager.lightGrey),
       ),
       //hint text style
-      hintStyle: TextStyles.regular12.copyWith(color: ColorsManager.primary),
+      hintStyle: TextStyles.regular12.copyWith(color: ColorsManager.lightGrey),
       //focused ERROR border
       focusedBorder: UnderlineInputBorder(
-        borderSide: const BorderSide(color: ColorsManager.primary),
-        borderRadius: BorderRadius.circular(12.0),
+        borderSide: const BorderSide(color: ColorsManager.lightGrey),
+        borderRadius: BorderRadius.circular(64.0),
       ),
       errorBorder: UnderlineInputBorder(
         borderSide: const BorderSide(color: ColorsManager.red),
-        borderRadius: BorderRadius.circular(12.0),
+        borderRadius: BorderRadius.circular(64.0),
       ),
       enabledBorder: UnderlineInputBorder(
-        borderSide: const BorderSide(color: ColorsManager.primary),
-        borderRadius: BorderRadius.circular(12.0),
+        borderSide: const BorderSide(color: ColorsManager.lightGrey),
+        borderRadius: BorderRadius.circular(64.0),
       ),
-      suffixStyle: TextStyles.regular12.copyWith(color: ColorsManager.primary),
+      disabledBorder: UnderlineInputBorder(
+        borderSide: const BorderSide(color: ColorsManager.lightGrey),
+        borderRadius: BorderRadius.circular(64.0),
+      ),
+      focusedErrorBorder: UnderlineInputBorder(
+        borderSide: const BorderSide(color: ColorsManager.red),
+        borderRadius: BorderRadius.circular(64.0),
+      ),
+
+      suffixStyle: TextStyles.regular12.copyWith(color: ColorsManager.grey),
       focusColor: ColorsManager.success,
       //focused ERROR hint text style
       errorStyle: TextStyles.regular12.copyWith(color: ColorsManager.red),
       //focused Label text style
-      labelStyle: TextStyles.regular12.copyWith(color: ColorsManager.primary),
+      labelStyle: TextStyles.regular12.copyWith(color: ColorsManager.grey),
       filled: true,
       fillColor: Colors.white,
 

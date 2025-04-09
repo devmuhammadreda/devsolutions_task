@@ -2,6 +2,7 @@
 import 'package:equatable/equatable.dart';
 
 import 'exceptions.dart';
+
 enum CodeStatus { defaultCode, activation }
 
 abstract class Failure extends Equatable {
@@ -30,39 +31,9 @@ class ServerFailure extends Failure {
   }
 }
 
-class TraderAlreadyExistFailure extends Failure {
-  final int id;
-  const TraderAlreadyExistFailure({
-    required super.message,
-    required this.id,
-  });
-  factory TraderAlreadyExistFailure.formException(
-      TraderAlreadyExistException exception) {
-    return TraderAlreadyExistFailure(
-        message: exception.message, id: exception.id);
-  }
-}
-
 class CacheFailure extends Failure {
   const CacheFailure({required super.message});
-}
-
-class EmpolyeeNotWorkingFailure extends Failure {
-  const EmpolyeeNotWorkingFailure({super.message = ''});
-}
-
-class OldVersionFailure extends Failure {
-  const OldVersionFailure({super.message = ''});
-}
-
-class AddressFailure extends Failure {
-  const AddressFailure({required super.message});
-}
-
-class AuthFailure extends Failure {
-  const AuthFailure() : super(message: '');
-}
-
-class NoCachedUserFailure extends Failure {
-  const NoCachedUserFailure({required super.message});
+  factory CacheFailure.formCacheException(CacheException exception) {
+    return CacheFailure(message: exception.message);
+  }
 }
