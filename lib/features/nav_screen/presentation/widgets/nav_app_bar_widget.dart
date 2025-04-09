@@ -60,5 +60,5 @@ class NavAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(76.0.sp);
+  Size get preferredSize => Size.fromHeight(60.0.sp);
 }

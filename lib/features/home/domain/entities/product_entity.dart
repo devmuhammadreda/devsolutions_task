@@ -2,7 +2,7 @@ import 'package:hive_ce/hive.dart';
 
 import 'rating_entity.dart';
 part 'product_entity.g.dart'; // Ensure this line is present
-@HiveType(typeId: 0)
+@HiveType(typeId: 2)
 class ProductEntity {
   @HiveField(0)
   final int? id;

@@ -1,6 +1,7 @@
 import 'package:hive_ce/hive.dart';
 part 'rating_entity.g.dart'; // Ensure this line is present
-@HiveType(typeId: 1)
+
+@HiveType(typeId: 3)
 class RatingEntity {
   @HiveField(0)
   final double? rate;

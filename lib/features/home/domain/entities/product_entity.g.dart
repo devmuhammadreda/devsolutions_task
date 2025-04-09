@@ -8,7 +8,7 @@ part of 'product_entity.dart';
 
 class ProductEntityAdapter extends TypeAdapter<ProductEntity> {
   @override
-  final int typeId = 0;
+  final int typeId = 2;
 
   @override
   ProductEntity read(BinaryReader reader) {

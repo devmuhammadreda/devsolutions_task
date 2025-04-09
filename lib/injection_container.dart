@@ -1,7 +1,10 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 import 'core/services/hive_service.dart';
 import 'core/services/network_service.dart/api_basehelper.dart';
+import 'features/favorites/favorites_inject.dart';
+import 'features/favorites/presentation/cubit/favorites_cubit.dart';
 import 'features/home/home_inject.dart';
 import 'features/nav_screen/nav_screen_inject.dart';
 
@@ -14,6 +17,7 @@ abstract class ServiceLocator {
     initHomeInjection();
     _injectDioHelper();
     _injectHiveService();
+    initFavoritesInjection();
   }
 }
 
@@ -25,7 +29,13 @@ void _injectDioHelper() {
 ApiBaseHelper get dioHelper => sl<ApiBaseHelper>();
 void _injectHiveService() {
   final HiveService hiveService = HiveService();
-  sl.registerLazySingleton<HiveService>(() => hiveService);
+  sl.registerFactory<HiveService>(() => hiveService);
 }
 
 HiveService get hiveService => sl<HiveService>();
+List<BlocProvider<Cubit<Object>>> appProviders() =>
+    <BlocProvider<Cubit<Object>>>[
+      BlocProvider<FavoritesCubit>(
+        create: (_) => sl<FavoritesCubit>()..getFavorites(),
+      ),
+    ];

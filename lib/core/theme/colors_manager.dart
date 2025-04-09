@@ -16,7 +16,7 @@ class ColorsManager {
   static const Color veryLightGrey = Color(0xFFCDCDCD);
   static const Color checkBoxBorderColor = Color(0xFFD9D9D9);
   static const Color lightGrey = Color(0xFFF7F7F7);
-  static const Color grey = Color(0xFF7C7C7C); //#8C8C8C
+  static const Color grey = Color(0xFF303030); //#8C8C8C
   static const Color darkGrey = Color(0xFF616161);
   static const Color veryDarkGrey = Color(0xFF505050);
   static const Color charcoal = Color(0xFF222222);
@@ -61,4 +61,20 @@ class ColorsManager {
     end: Alignment.bottomRight,
     colors: [Color(0xFfABDCFF), Color(0xFF0396FF)],
   );
+
+    static LinearGradient get visaLinearGradient {
+    return LinearGradient(
+      colors: [Color(0xFFE27BC1), Color(0xFFFF5500)],
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+    );
+  }
+
+    static LinearGradient get mastercardLinearGradient {
+    return LinearGradient(
+      colors: [Color(0xFFA280C1), Color(0xFF4D0A8E)],
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+    );
+  }
 }

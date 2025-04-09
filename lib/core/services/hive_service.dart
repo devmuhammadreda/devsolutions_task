@@ -1,36 +1,39 @@
+import 'package:devsolutions_task/hive_registrar.g.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
-
-import '../../features/home/domain/entities/product_entity.dart';
-import '../../features/home/domain/entities/rating_entity.dart';
 
 class HiveService {
   bool _isInitialized = false;
-
-  HiveService(); // Public constructor
+  final Map<String, Box> _openBoxes = {};
 
   Future<void> init() async {
     if (_isInitialized) return;
     try {
       await Hive.initFlutter();
-      Hive.registerAdapter(ProductEntityAdapter());
-      Hive.registerAdapter(RatingEntityAdapter());
+      if (!Hive.isAdapterRegistered(2) && !Hive.isAdapterRegistered(3)) {
+        Hive.registerAdapters();
+      }
       _isInitialized = true;
     } catch (e) {
       throw Exception('Failed to initialize Hive: $e');
     }
   }
 
-  Future<Box<T>> openBox<T>(String boxName) async {
+  Future<Box<T>> _getBox<T>(String boxName) async {
     await init();
+    if (_openBoxes.containsKey(boxName) && _openBoxes[boxName]!.isOpen) {
+      return _openBoxes[boxName]! as Box<T>;
+    }
     try {
-      return await Hive.openBox<T>(boxName);
+      final box = await Hive.openBox<T>(boxName);
+      _openBoxes[boxName] = box;
+      return box;
     } catch (e) {
       throw Exception('Failed to open box $boxName: $e');
     }
   }
 
   Future<void> add<T>(String boxName, String key, T value) async {
-    final box = await openBox<T>(boxName);
+    final box = await _getBox<T>(boxName);
     try {
       await box.put(key, value);
     } catch (e) {
@@ -39,7 +42,7 @@ class HiveService {
   }
 
   Future<void> remove<T>(String boxName, String key) async {
-    final box = await openBox<T>(boxName);
+    final box = await _getBox<T>(boxName);
     try {
       await box.delete(key);
     } catch (e) {
@@ -48,7 +51,7 @@ class HiveService {
   }
 
   Future<T?> get<T>(String boxName, String key) async {
-    final box = await openBox<T>(boxName);
+    final box = await _getBox<T>(boxName);
     try {
       return box.get(key);
     } catch (e) {
@@ -57,7 +60,7 @@ class HiveService {
   }
 
   Future<List<T>> getAll<T>(String boxName) async {
-    final box = await openBox<T>(boxName);
+    final box = await _getBox<T>(boxName);
     try {
       return box.values.toList();
     } catch (e) {
@@ -72,5 +75,14 @@ class HiveService {
     } catch (e) {
       throw Exception('Failed to close box $boxName: $e');
     }
+  }
+
+  Future<void> closeAllBoxes() async {
+    for (var box in _openBoxes.values) {
+      if (box.isOpen) {
+        await box.close();
+      }
+    }
+    _openBoxes.clear();
   }
 }
